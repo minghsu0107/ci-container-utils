@@ -16,7 +16,8 @@ git checkout $MANIFEST_BRANCH
 cd $KUSTOMIZATION
 
 set-image-tag.sh
-REMOTE_URL=`cut -d'?' -f1 <<< "$(yq '.resources[0]' kustomization.yaml)"`
+yq '.resources[0]' kustomization.yaml > /tmp/input.txt
+REMOTE_URL=`cut -d'?' -f1 /tmp/input.txt`
 yq -i '.resources[0] = "'$REMOTE_URL'?ref='$REF'"' kustomization.yaml
 
 git config --global user.name $MANIFEST_USER
