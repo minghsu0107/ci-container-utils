@@ -13,6 +13,7 @@ WORKDIR /
 RUN apk update && \
     apk add --no-cache curl && \
     apk add --no-cache yq && \
+    apk add --no-cache git && \
     curl -fL ${KUBE_URL} -o /bin/kubectl && \
     chmod +x /bin/kubectl && \
     curl -fL ${KUSTOMIZE_URL} | tar xz && \
