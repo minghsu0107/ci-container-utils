@@ -24,5 +24,5 @@ docker run --rm \
 -e MANIFEST_USER=minghsu0107 \
 -e MANIFEST_USER_EMAIL=minghsu0107@gmail.com \
 -e MANIFEST_SSH_URL=git@github.com:minghsu0107/cicd-demo-ga-manifests.git \
-minghsu0107/kubectl-kustomize -c "update-kustomize.sh"
+minghsu0107/kubectl-kustomize -c "kustomization.sh"
 ```
