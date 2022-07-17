@@ -1,0 +1,4 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+- ssh://git@github.com/minghsu0107/cicd-demo-ga-manifests//overlays/dev?ref=main
