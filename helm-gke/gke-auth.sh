@@ -5,6 +5,7 @@ set -e
 
 gcloud auth activate-service-account --key-file $GCLOUD_JSON_FILE
 # register all Google-supported Docker registries
+# credential file path: $HOME/.docker/config.json (/root/.docker/config.json)
 gcloud auth configure-docker --quiet
 
 # setup kubecfg
