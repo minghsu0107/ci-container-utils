@@ -6,6 +6,8 @@ Docker image that helps using git with SSH.
 
 ```bash
 export REPO_URL=git@github.com:minghsu0107/update-kustomization.git
+# or
+export REPO_URL=ssh://git@github.com/minghsu0107/update-kustomization.git
 export SSH_KEY_PATH=/tmp/id_rsa
 docker run --rm \
 -v $HOME/.ssh/id_rsa:$SSH_KEY_PATH \
