@@ -23,4 +23,7 @@ yq -i '.resources[0] = "'$REMOTE_URL'?ref='$REF'"' kustomization.yaml
 git config --global user.name $MANIFEST_USER
 git config --global user.email $MANIFEST_USER_EMAIL
 git add . && git commit --allow-empty -m "🚀 update to ${IMAGE_TAG}"
+
+# push the current branch to its upstream branch
+# but refuses to push if the upstream branch's name is different from the local one
 git push $MANIFEST_SSH_URL
