@@ -10,8 +10,7 @@ export MANIFEST_USER=${MANIFEST_USER:-""}
 export MANIFEST_USER_EMAIL=${MANIFEST_USER_EMAIL:-""}
 
 ssh-auth.sh
-git clone $MANIFEST_SSH_URL /manifest && cd /manifest
-git checkout $MANIFEST_BRANCH
+git clone --depth 1 --branch $MANIFEST_BRANCH $MANIFEST_SSH_URL /manifest && cd /manifest
 cd $KUSTOMIZATION
 
 set-image-tag.sh
