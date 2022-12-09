@@ -28,6 +28,7 @@ minghsu0107/kubectl-kustomize -c "kustomization.sh"
 ```
 Update kustomization with remote ref:
 ```bash
+export SSH_KEY_PATH=/tmp/id_rsa
 docker run --rm \
 -v $HOME/.ssh/id_rsa:$SSH_KEY_PATH \
 -e SSH_KEY_PATH=$SSH_KEY_PATH \
