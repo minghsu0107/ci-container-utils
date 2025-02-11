@@ -3,7 +3,7 @@
 # exit if a command fails
 set -e
 
-export KUBE_CLUSTER=${KUBE_CLUSTER:-""}
+export KUBE_CLUSTER=${KUBE_CLUSTER:-""} # https://kubernetes.default.svc
 export KUBE_SERVER=${KUBE_SERVER:-""}
 export KUBE_SA=${KUBE_SA:-""}
 # authenticate by serviceacount token
